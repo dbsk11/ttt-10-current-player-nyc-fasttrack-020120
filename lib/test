@@ -1,0 +1,107 @@
+#question 1
+my_name = "Jessica Kim"
+puts my_name
+
+#question 2
+my_favs = ["pizza", "pasta", "fries"]
+new_favs = my_favs.pop.reverse
+my_favs << new_favs
+
+my_favs
+
+#Q4
+names = ["James", "John", "Jerry"]
+def greeting(names)
+names.each do |name|
+puts "Welcome, #{name}!"
+end
+end
+
+greeting(names)
+
+
+#Q5
+
+def greeting_names(names)
+names.map {|a| "Welcome, #{a}!"}
+end #on irb, return value showed new array
+
+greeting_names(names)
+
+#Q6
+
+welcome_msgs_array = greeting_names(names)
+def room_assigner(welcome_msgs_array)
+Array.new << welcome_msgs_array.each_with_index do |item, index| p "#{item} You are assigned to room #{index+1}"
+end
+end
+
+room_assigner(welcome_msgs_array)
+
+#welcome_msgs_array = greeting_names(names)
+#def room_assigner(welcome_msgs_array)
+#welcome_msgs_array.each_with_index do |item, index| p "#{item} You are assigned to room #{index+1}"
+#end
+#end
+
+#room_assigner(welcome_msgs_array)
+
+
+#Q7
+def truthy_checker(phrase)
+if phrase == true
+puts "Rejoice, By the old Gods and the New; this argument is truthy!"
+else
+puts "fowl beast! you speak not the truth!"
+end
+end
+
+truthy_checker(5>3)
+truthy_checker(5==3)
+truthy_checker(false)
+
+
+#Q8
+wizards = ["Harry", "Voldemort", "Hermione"]
+def villain_finder(wizards)
+if wizards.include? "Voldemort"
+puts "Voldemort is lurking in their midsts!"
+else
+puts "All clear!"
+end
+end
+
+villain_finder(wizards)
+
+
+#Q9
+people = ["Jack", "Jill", "Frost"]
+def name_length(people)
+people.each do |name|
+puts "#{name}: #{name.size}"
+end
+end
+
+name_length(people)
+
+#Q10
+integers = [1, 2, 3, 4]
+def int_total(integers)
+sum = 0
+integers.each {|int| sum = sum + int}
+return sum
+end
+
+int_total(integers)
+
+#Q11
+friend_names = ["david", "jae", "joshua", "sonia"]
+def while_capitalize(friend_names)
+  counter = 0
+  while counter < friend_names.length
+    puts friend_names[counter].capitalize
+    counter += 1
+  end
+end
+
+while_capitalize(friend_names)

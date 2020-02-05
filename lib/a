@@ -1,0 +1,24 @@
+
+welcome_msgs_array = ["Hi Jack", "Hi Jill"]
+def room_assigner(welcome_msgs_array)
+#  welcome_2 = welcome_msgs_array.map {|a| "#{a} You are assigned to room"}
+  welcome_2 = welcome_msgs_array.each_with_index do |item, index| p "#{item}  YOu are #{index+1}"
+return welcome_2.map
+  end
+end
+
+room_assigner(welcome_msgs_array)
+
+#def greeting_names(names)
+#names.map {|a| "Welcome, #{a}!"}
+#end #on irb, return value showed new array
+
+#greeting_names(names)
+
+#welcome_msgs_array = greeting_names(names)
+#def room_assigner(welcome_msgs_array)
+#Array.new << welcome_msgs_array.each_with_index do |item, index| p "#{item} You are assigned to room #{index+1}"
+#end
+#end
+
+#room_assigner(welcome_msgs_array)
